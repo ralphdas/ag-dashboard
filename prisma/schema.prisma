@@ -1,0 +1,100 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  name          String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  media         Media[]
+  organizations Organization[] @relation("OrganizationUsers")
+}
+
+model Organization {
+  id               String   @id @default(cuid())
+  name             String
+  description      String?
+  stripeCustomerId String?
+  updatedAt        DateTime @updatedAt
+  users            User[]   @relation("OrganizationUsers")
+}
+
+model Media {
+  id              String          @id @default(cuid())
+  convertedFiles  FileReference[]
+  title           String
+  description     String
+  createdAt       DateTime        @default(now())
+  encoderJob      EncoderJob[]
+  fileReferenceId String
+  user            User            @relation(fields: [userId], references: [id])
+  userId          String
+  organizationId  String
+}
+
+model FileReference {
+  id         String   @id @default(cuid())
+  filename   String   @unique
+  identifier String // thumbmnail, original, etc
+  filesize   Int
+  width      Int
+  height     Int
+  mimetype   String
+  encoding   String
+  url        String
+  expires    DateTime
+  sha256     String
+  createdAt  DateTime @default(now())
+  mediaId    String   @unique
+  media      Media    @relation(fields: [mediaId], references: [id])
+}
+
+enum EncoderJobStatus {
+  UPLOADING
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  FAILED
+}
+
+enum FileType {
+  IMAGE
+  VIDEO
+}
+
+model EncoderJob {
+  id                        String           @id @default(cuid())
+  media                     Media            @relation(fields: [mediaId], references: [id])
+  mediaId                   String
+  status                    EncoderJobStatus
+  progress                  Int
+  createdAt                 DateTime         @default(now())
+  staredAt                  DateTime?
+  completedAt               DateTime?
+  encoderConversionConfigId String
+}
+
+model EncoderConversionConfig {
+  id         String   @id @default(cuid())
+  fileType   FileType
+  identifier String
+  width      Int
+  height     Int
+  codec      String
+  number     Int
+  bitrate    Int
+  createdAt  DateTime @default(now())
+}

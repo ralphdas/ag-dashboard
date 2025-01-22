@@ -1,0 +1,102 @@
+[
+    {
+      "username": "john.doe",
+      "emailAddress": "johndoe@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/men/1.jpg",
+      "status": "ACTIVE",
+      "lastSeen": 1696161600,
+      "type": "NETWORK_MANAGER",
+      "fullName": "John Doe",
+      "firstName": "John"
+    },
+    {
+      "username": "jane.doe",
+      "emailAddress": "janedoe@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/women/2.jpg",
+      "status": "INACTIVE",
+      "lastSeen": 1696248000,
+      "type": "ADMIN",
+      "fullName": "Jane Doe",
+      "firstName": "Jane"
+    },
+    {
+      "username": "mike.johnson",
+      "emailAddress": "mikejohnson@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/men/3.jpg",
+      "status": "ACTIVE",
+      "lastSeen": 1696334400,
+      "type": "CONTENT_EDITOR",
+      "fullName": "Mike Johnson",
+      "firstName": "Mike"
+    },
+    {
+      "username": "emily.clark",
+      "emailAddress": "emilyclark@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/women/4.jpg",
+      "status": "INACTIVE",
+      "lastSeen": 1696420800,
+      "type": "NETWORK_MANAGER",
+      "fullName": "Emily Clark",
+      "firstName": "Emily"
+    },
+    {
+      "username": "david.brown",
+      "emailAddress": "davidbrown@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/men/5.jpg",
+      "status": "ACTIVE",
+      "lastSeen": 1696507200,
+      "type": "ADMIN",
+      "fullName": "David Brown",
+      "firstName": "David"
+    },
+    {
+      "username": "sara.wilson",
+      "emailAddress": "sarawilson@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/women/6.jpg",
+      "status": "INACTIVE",
+      "lastSeen": 1696593600,
+      "type": "CONTENT_EDITOR",
+      "fullName": "Sara Wilson",
+      "firstName": "Sara"
+    },
+    {
+      "username": "chris.lee",
+      "emailAddress": "chrislee@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/men/7.jpg",
+      "status": "ACTIVE",
+      "lastSeen": 1696680000,
+      "type": "NETWORK_MANAGER",
+      "fullName": "Chris Lee",
+      "firstName": "Chris"
+    },
+    {
+      "username": "lisa.martin",
+      "emailAddress": "lisamartin@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/women/8.jpg",
+      "status": "INACTIVE",
+      "lastSeen": 1696766400,
+      "type": "ADMIN",
+      "fullName": "Lisa Martin",
+      "firstName": "Lisa"
+    },
+    {
+      "username": "james.white",
+      "emailAddress": "jameswhite@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/men/9.jpg",
+      "status": "ACTIVE",
+      "lastSeen": 1696852800,
+      "type": "CONTENT_EDITOR",
+      "fullName": "James White",
+      "firstName": "James"
+    },
+    {
+      "username": "karen.moore",
+      "emailAddress": "karenmoore@example.com",
+      "avatarUrl": "https://randomuser.me/api/portraits/women/10.jpg",
+      "status": "INACTIVE",
+      "lastSeen": 1696939200,
+      "type": "NETWORK_MANAGER",
+      "fullName": "Karen Moore",
+      "firstName": "Karen"
+    }
+]
